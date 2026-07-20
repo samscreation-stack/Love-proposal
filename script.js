@@ -235,7 +235,7 @@ const photos = [
     {
         image:"assets/Maleka 04.jpg",
         caption:"The best chapters are still ahead 📖"
-    }
+    },
 
 ];
 
