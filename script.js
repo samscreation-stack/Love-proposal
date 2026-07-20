@@ -214,27 +214,27 @@ const photos = [
 
     {
         image:"assets/maleka 01.jpg",
-        caption:"The beginning of beautiful memories ❤️ (if can,t click continue drug up by two finger"
+        caption:"The beginning of beautiful memories ❤️"
     },
 
     {
         image:"assets/maleka 05.jpg",
-        caption:"The pic sam want more 👀 (if can,t click continue drug up by two finger"
+        caption:"The pic sam want more 👀"
     },
 
     {
         image:"assets/maleka 03.jpg",
-        caption:"Some moments deserve to last forever ✨ (if can,t click continue drug up by two finger"
+        caption:"Some moments deserve to last forever ✨"
     },
 
     {
         image:"assets/maleka 02.jpg",
-        caption:"The pic sam love most 💖(if can,t click continue drug up by two finger"
+        caption:"The pic sam love most 💖"
     },
 
     {
         image:"assets/Maleka 04.jpg",
-        caption:"The best chapters are still ahead 📖 (if can,t click continue drug up by two finger"
+        caption:"The best chapters are still ahead 📖"
     },
 
 ];
