@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For My Sunflower 🌻</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="storyProgress">
+
+    <div id="progressBar"></div>
+
+</div>
+    <div id="heart-container"></div>
+    <div id="confetti-container"></div>
+    <audio
+    id="bgMusic"
+    loop>
+
+    <source
+        src="assets/songs1.mp3"
+        type="audio/mpeg">
+
+</audio>
+<div id="loader">
+
+    <div class="loader-card">
+
+        <div class="sunflower"> 🌻
+</div>
+        <h2>Preparing Something Special...</h2>
+<p id="loadingMessage">
+    🌻 Dear Sunflower...
+</p>
+
+        <div class="loading-bar">
+
+            <div id="loading-progress"></div>
+
+        </div>
+
+        <p>Just a moment...</p>
+
+    </div>
+
+</div>
+
+ <!-- ================= WELCOME ================= -->
+
+<section id="welcome">
+
+    <div class="card">
+
+       <h1>🌻 Hey Sunflower 🌻</h1>
+
+<p>
+
+I know you're wondering...
+
+"What is this?" 🤔
+
+Well...
+
+I made something
+just for you.
+
+And I hope
+you'll stay till the end.
+
+❤️
+
+</p>
+
+<button onclick="startExperience()">
+    Let's Go ❤️
+</button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROMISE ================= -->
+
+<section id="promise">
+
+    <div class="card">
+
+        <h1>🤞 One Promise</h1>
+
+<p>
+
+Promise me...
+
+You won't skip anything.
+
+Don't rush.
+
+Just smile,
+
+read,
+
+and enjoy every page.
+
+Deal? 😊
+
+</p>
+
+<button onclick="showPage('stats')">
+
+I Promise 🌻
+
+</button>
+    </div>
+
+</section>
+
+
+
+<!-- ================= MALEKA ANALYZER ================= -->
+
+<section id="stats">
+
+    <div class="card">
+
+        <h1>🌻 Maleka Analyzer</h1>
+
+        <h3 id="scanTitle">
+            Initializing...
+        </h3>
+
+        <div class="scan-bar">
+
+            <div id="scanProgress"></div>
+
+        </div>
+
+        <div id="scanResult">
+
+            Please wait...
+
+        </div>
+
+        <button
+        id="scanContinue"
+        onclick="showPage('qualities')"
+        style="display:none;">
+
+            Continue ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= QUALITIES ================= -->
+
+<section id="qualities">
+
+    <div class="card">
+
+        <h1>🌸 Things I Love About You</h1>
+
+<p>
+
+🌻 Your smile
+
+<br><br>
+
+🌻 Your kindness
+
+<br><br>
+
+🌻 Your cute little attitude
+
+<br><br>
+
+🌻 The way you make ordinary days special
+
+</p>
+
+<button onclick="showPage('memories')">
+
+Continue ❤️
+
+</button>
+    </div>
+
+</section>
+
+
+
+<!-- ================= MEMORIES ================= -->
+
+<section id="memories">
+
+    <div class="card">
+
+        <h1>📸 Our Memories</h1>
+
+        <img
+            id="galleryImage"
+            src="assets/photos/photo1.jpg"
+            alt="Memory">
+
+        <p id="galleryCaption">
+
+            Every memory has
+            a beautiful story.
+
+        </p>
+
+        <div class="gallery-buttons">
+
+            <button id="prevPhoto">
+                ◀
+            </button>
+
+            <button id="nextPhoto">
+                ▶
+            </button>
+
+        </div>
+
+        <button onclick="showPage('letter')">
+
+            Continue ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter">
+
+    <div class="card">
+
+       <h1>💌 Dear Sunflower</h1>
+
+<p id="typingText"></p>
+
+<button onclick="showPage('secret')">
+
+Continue...
+
+</button>
+    </div>
+
+</section>
+
+<!-- ================= SECRET ================= -->
+
+<section id="secret">
+
+<div class="card">
+
+<h1>🤫 One Last Secret...</h1>
+
+<p>
+
+There's something
+
+I've wanted
+
+to tell you
+
+for a long time.
+
+But...
+
+I wanted
+
+this moment
+
+to be special.
+
+❤️
+
+</p>
+
+<button onclick="showPage('proposal')">
+
+I'm Ready...
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PROPOSAL ================= -->
+<section id="proposal">
+
+    <div class="card">
+
+        <h1>🌻</h1>
+
+        <h2>
+            Sunflower...
+            <br><br>
+
+            Will You Let Me
+            Be Your Safe Place?
+            ❤️
+        </h2>
+
+        <p>
+
+            I can't promise a perfect life.
+
+            <br><br>
+
+            But I can promise
+
+            to stand beside you,
+
+            laugh with you,
+
+            support you,
+
+            and choose you
+
+            every single day.
+
+        </p>
+
+        <div class="proposal-buttons">
+
+            <button id="yesButton">
+
+                YES ❤️
+
+            </button>
+
+            <button id="noButton">
+
+                No 😒
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= MOMENT ================= -->
+
+<section id="moment">
+
+    <div class="card moment-card">
+
+        <div class="moment-heart">
+            🌻
+        </div>
+
+        <h2 id="momentTitle"></h2>
+
+        <p id="momentText"></p>
+
+    </div>
+
+</section>
+
+<!-- ================= CELEBRATION ================= -->
+
+<section id="celebration">
+
+    <div class="card">
+
+        <h1 class="celebrate-heart">💖</h1>
+
+        <h2>
+
+            You Made Sam
+
+            The Happiest Person ❤️
+
+        </h2>
+
+        <p>
+
+            🌻 Thank you, Sunflower.
+
+            <br><br>
+
+            No matter where life takes us,
+
+            you'll always have
+
+            a safe place with me.
+
+            <br><br>
+
+            — Sam ❤️
+
+        </p>
+
+    </div>
+
+</section>
+<script src="script.js"></script>
+
+</body>
+
+
+</html>

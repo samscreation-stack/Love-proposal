@@ -1,0 +1,819 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffb199);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/* =========================
+   EVERY SCREEN
+========================= */
+
+section {
+
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+/* Show only the first screen */
+
+#welcome {
+
+    display: flex;
+
+}
+
+/* =========================
+   TEXT
+========================= */
+
+h1 {
+
+    font-size: 38px;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+p {
+
+    font-size: 20px;
+
+    color: white;
+
+    line-height: 1.6;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    margin-top:35px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    background:white;
+
+    color:#ff4b7d;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+button:active{
+
+    transform:scale(.95);
+
+}
+/* =========================
+   GLASS CARD
+========================= */
+
+.card{
+
+    width:100%;
+
+    max-width:380px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:40px 25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+/* =========================
+   FADE ANIMATION
+========================= */
+
+.fade-in{
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+#heart-container{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-40px;
+
+    font-size:20px;
+
+    animation:floatUp linear forwards;
+
+}
+
+@keyframes floatUp{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+/* =========================
+   PROPOSAL BUTTONS
+========================= */
+
+.proposal-buttons{
+
+    position:relative;
+
+    width:100%;
+
+    height:180px;
+
+    margin-top:30px;
+
+}
+
+#yesButton{
+
+    position:absolute;
+
+    left:25px;
+
+    bottom:20px;
+
+    background:#ff4b7d;
+
+    color:white;
+
+}
+
+#noButton{
+
+    position:absolute;
+
+    right:25px;
+
+    bottom:20px;
+
+    background:white;
+
+    color:#ff4b7d;
+
+}
+
+/* =========================
+   CELEBRATION
+========================= */
+
+.celebrate-heart{
+
+    font-size:80px;
+
+    animation:heartbeat .8s infinite;
+
+}
+
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+/* =========================
+   GALLERY
+========================= */
+
+#galleryImage{
+
+    width:100%;
+
+    max-width:260px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin:20px auto;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.gallery-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+/* =========================
+   LOADER
+========================= */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ff7eb3;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:opacity .8s;
+
+}
+
+.loader-card{
+    width:90%;
+    max-width:320px;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    color:#050505;
+
+    animation:floatCard 4s ease-in-out infinite;
+}
+.loader-card h2{
+    color:#ff4b7d;
+    margin-bottom:20px;
+}
+
+#loadingMessage{
+    color:#444;
+    line-height:1.7;
+    font-size:18px;
+}
+.loading-bar{
+
+    width:100%;
+
+    height:12px;
+
+    background:#eee;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+#loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #ff4b7d,
+        #ff9ec4,
+        #ffd166
+    );
+
+    border-radius:20px;
+
+    box-shadow:0 0 15px rgba(255,75,125,.5);
+    transition: width 0.12s linear;
+
+}
+/* =========================
+   SUNFLOWER
+========================= */
+
+.sunflower{
+
+    font-size:90px;
+
+    animation:bloom 12s ease forwards;
+
+    margin-bottom:15px;
+
+}
+@keyframes bloom{
+
+    0%{
+
+        transform:scale(.2) rotate(-20deg);
+
+        opacity:0;
+
+    }
+
+    25%{
+
+        transform:scale(.5) rotate(5deg);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:scale(.8);
+
+        opacity:.8;
+
+    }
+
+    75%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1.15);
+
+        opacity:1;
+
+    }
+
+}
+.sunflower{
+
+    text-shadow:
+
+        0 0 15px rgba(255,215,0,.5),
+
+        0 0 30px rgba(255,215,0,.3);
+
+
+}
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================
+   CONFETTI
+========================= */
+
+#confetti-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.confetti{
+
+    position:absolute;
+
+    width:10px;
+
+    height:18px;
+
+    animation:confettiFall linear forwards;
+
+}
+@keyframes confettiFall{
+
+    from{
+
+        transform:
+        translateY(-120px)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateY(120vh)
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+/* =========================
+   CINEMATIC MOMENT
+========================= */
+
+#moment{
+
+    background:#111;
+
+}
+
+.moment-card{
+
+    background:transparent;
+
+    border:none;
+
+    box-shadow:none;
+
+    color:white;
+
+}
+
+.moment-heart{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    animation:heartbeat 1s infinite;
+
+}
+#momentTitle,
+#momentText{
+
+    animation:fadeInText .8s ease;
+
+}
+
+@keyframes fadeInText{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================
+   STORY PROGRESS
+========================= */
+
+#storyProgress{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:8px;
+
+    background:rgba(255,255,255,.15);
+
+    z-index:999;
+
+}
+
+#progressBar{
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #FFD54F,
+        #FF6B81,
+        #FF4081
+    );
+
+    border-radius:20px;
+
+    transition:width .7s ease;
+
+    box-shadow:0 0 15px rgba(255,105,180,.6);
+
+}
+#loader ~ #storyProgress{
+    display:none;
+}
+/* =========================
+   MALEKA ANALYSIS
+========================= */
+
+.analysis-box{
+
+    margin:25px 0;
+
+}
+
+.analysis-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.18);
+
+    padding:14px 16px;
+
+    border-radius:16px;
+
+    margin-bottom:12px;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+}
+
+.result-box{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.result-box h2{
+
+    color:#FFD54F;
+
+    margin-bottom:12px;
+
+}
+
+.result-box p{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+.result-box strong{
+
+    color:#FFE066;
+
+    font-size:24px;
+
+}
+
+/* =========================
+   MALEKA ANALYZER
+========================= */
+
+.scan-bar{
+
+    width:100%;
+
+    height:16px;
+
+    background:#eee;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+#scanProgress{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #FFD54F,
+        #FF6B81
+    );
+
+    transition:.5s;
+
+}
+
+#scanResult{
+
+    color:white;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    min-height:220px;
+
+}
+
+#scanTitle{
+
+    color:white;
+
+    margin-top:15px;
+
+    font-size:24px;
+
+}
+/* =========================
+   NO BUTTON BREAK
+========================= */
+
+.break{
+
+    animation:breakButton .8s forwards;
+
+}
+
+@keyframes breakButton{
+
+    0%{
+
+        transform:scale(1) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    25%{
+
+        transform:scale(1.15) rotate(-8deg);
+
+    }
+
+    50%{
+
+        transform:scale(.9) rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(250px)
+        rotate(720deg)
+        scale(.2);
+
+        opacity:0;
+
+    }
+
+}
