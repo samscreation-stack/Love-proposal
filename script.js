@@ -615,7 +615,7 @@ function startAnalyzer(){
 
         }
 
-    },300);
+    },350);
 
 
 
@@ -641,7 +641,7 @@ function startAnalyzer(){
 
             case 1:
 
-                if(percent>=18){
+                if(percent>=16){
 
                     stage++;
 
@@ -661,7 +661,7 @@ function startAnalyzer(){
 
             case 2:
 
-                if(percent>=35){
+                if(percent>=32){
 
                     stage++;
 
@@ -680,7 +680,7 @@ function startAnalyzer(){
             break;
             case 3:
 
-    if(percent>=50){
+    if(percent>=46){
 
         stage++;
 
@@ -703,7 +703,7 @@ break;
 
 case 4:
 
-    if(percent>=61){
+    if(percent>=59){
 
         stage++;
 
@@ -728,7 +728,7 @@ break;
 
 case 5:
 
-    if(percent>=72){
+    if(percent>=68){
 
         stage++;
 
@@ -755,7 +755,7 @@ case 5:
 break;
 case 6:
 
-    if(percent>=82){
+    if(percent>=78){
 
         stage++;
 
@@ -790,7 +790,7 @@ break;
 
 case 7:
 
-    if(percent>=90){
+    if(percent>=87){
 
         stage++;
 
@@ -832,21 +832,15 @@ case 8:
         <h3> Status:
         Most rare one ❤️</h3>
 
-        <br>
+        <h3>Best Match:</h3>
 
-        Best Match:
-
-        <h3 style="color:#ff6b81;">
+        <h4 style="color:#ff6b81;">
         ❤️ CUO(D-Company)="SAM" ❤️
         </h4>
 
-        <br>
-
-        
-
-        <h2 style="color:#7CFC00;">
+        <h3 style="color:#7CFC00;">
         Compatibility: 101%
-        </h2>
+        </h3>
 
         `;
 
