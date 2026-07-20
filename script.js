@@ -828,15 +828,11 @@ case 8:
         <h2 style="color:#FFD54F;">
         MALEKA
         </h2>
-
         <h3> Status:
         Most rare one ❤️</h3>
-
         <h3>Best Match:</h3>
-
-        <h4 style="color:#ff6b81;">
-        ❤️ CUO(D-Company)="SAM" ❤️
-        </h4>
+        ❤️CUO(D-Company)="SAM"❤️
+        
 
         <h3 style="color:#7CFC00;">
         Compatibility: 101%
